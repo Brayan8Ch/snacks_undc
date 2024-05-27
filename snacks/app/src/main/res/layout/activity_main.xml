@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_inicio"
+    tools:context=".MainActivity"
+>
+
+    <Button
+        android:id="@+id/btn_inicio"
+        android:layout_width="341dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#6C63FE"
+        android:fontFamily="@font/josefin_sans"
+        android:onClick="cambioInterfaz"
+        android:text="¡Vamos a iniciar!"
+        android:textColorLink="#6C63FE"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.892"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="348dp"
+        android:layout_height="551dp"
+        android:background="@drawable/layout_redondeado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.439">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="281dp"
+            android:layout_height="486dp"
+            android:background="@color/background_caja_inicio"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.492">
+
+            <TextView
+                android:id="@+id/texto_inicio_1"
+                android:layout_width="277dp"
+                android:layout_height="129dp"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:text="Sistema Distribuidora HORNA"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.044"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/texto_inicio_2"
+                android:layout_width="245dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/josefin_sans"
+                android:text="Vamos a iniciar."
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.325"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
