@@ -1,16 +1,26 @@
-<?php 
-include ("conexion.php");
-$username = $_POST['username_usuario'];
-$password = $_POST['password_usuario'];
+<?php
+include 'conexion.php';
 
-$sentencia = $conexion->prepare('SELECT * FROM WHERE username = ? and password = ?');
-$sentencia -> bind-param ('ss', $username, $password);
-$sentencia -> execute();
+// Recibir los datos enviados desde Android
+$username_usuario = $_POST['username'];
+$contraseña_usuario = $_POST['password'];
 
-$resultado = $sentencia -> get_result();
-if ($fila = $resultado -> fetch_assoc()){
-    echo json_decode($fila,JSON_UNESCAPED_UNICODE);
+// Preparar la sentencia SQL con los valores recibidos
+$sentencia = $conexion->prepare("SELECT * FROM usuario WHERE username_usuario = ? AND contraseña_usuario = ?");
+$sentencia->bind_param('ss', $username_usuario, $contraseña_usuario);
+$sentencia->execute();
+
+// Obtener el resultado
+$resultado = $sentencia->get_result();
+if ($fila = $resultado->fetch_assoc()) {
+    // Si el usuario es válido, enviar la información en formato JSON
+    echo json_encode($fila, JSON_UNESCAPED_UNICODE);
+} else {
+    // Si no se encuentra coincidencia, enviar una respuesta vacía
+    echo "";
 }
-$sentencia -> close ();
-$conexion -> close ();
+
+// Cerrar la conexión
+$sentencia->close();
+$conexion->close();
 ?>

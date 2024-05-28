@@ -38,7 +38,7 @@
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/id_user"
+        android:id="@+id/username_usuario"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:drawableStart="@drawable/usuario_24"
@@ -71,7 +71,7 @@
         tools:ignore="HardcodedText,TextSizeCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/password_user"
+        android:id="@+id/password_usuario"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:drawableStart="@drawable/cerrar_24"
